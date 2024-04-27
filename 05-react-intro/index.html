@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>React Intro</title>
+    
+    <!-- Load Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- React's core library - react -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+
+    <!-- ReactDOM library - renders React componens to the DOM -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  </head>
+  <body>
+
+    <div id="root"></div>
+    
+    <script type="text/babel">
+      // const h1 = React.createElement('h1', {}, "Hello!!!");
+      const h1 = <h1>Hello from JSX!</h1>;
+
+      function Image () {
+        return (
+          <img
+            style={{width: "100px"}} 
+            src="https://cdn-icons-png.flaticon.com/512/620/620851.png" 
+            alt=""
+          />
+        )
+      }
+
+      function App () {
+        return(
+          <div>
+            <h1> React Intro </h1>
+            <br />
+            <p> Hello Ironhackers! </p>
+            <Image />
+            <Image />
+            <Image />
+            <Image />
+          </div>
+        )
+      }
+
+
+      ReactDOM
+        .createRoot(document.getElementById("root"))
+        .render(<App />)
+
+    </script>
+    
+  </body>
+</html>
